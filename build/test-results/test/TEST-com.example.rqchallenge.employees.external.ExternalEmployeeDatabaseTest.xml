@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.rqchallenge.employees.external.ExternalEmployeeDatabaseTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-06-09T11:49:22" hostname="Amits-Laptop.local" time="0.312">
+  <properties/>
+  <testcase name="shouldReturnEmptyCreateEmployeeIfNullData()" classname="com.example.rqchallenge.employees.external.ExternalEmployeeDatabaseTest" time="0.207"/>
+  <testcase name="shouldEmployeeDetailsById()" classname="com.example.rqchallenge.employees.external.ExternalEmployeeDatabaseTest" time="0.067"/>
+  <testcase name="shouldDeleteEmployeeDetails()" classname="com.example.rqchallenge.employees.external.ExternalEmployeeDatabaseTest" time="0.009"/>
+  <testcase name="shouldCreateEmployeeDetails()" classname="com.example.rqchallenge.employees.external.ExternalEmployeeDatabaseTest" time="0.006"/>
+  <testcase name="shouldGetAllEmployees()" classname="com.example.rqchallenge.employees.external.ExternalEmployeeDatabaseTest" time="0.008"/>
+  <testcase name="shouldGetInvalidApiResponseExceptionForIfApiReturnNonSuccessStatus()" classname="com.example.rqchallenge.employees.external.ExternalEmployeeDatabaseTest" time="0.009"/>
+  <system-out><![CDATA[2024-06-09 17:19:22.770 ERROR 65677 --- [    Test worker] c.e.r.e.e.ExternalEmployeeDatabase       : Api did not return success response. Status code returned 429
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

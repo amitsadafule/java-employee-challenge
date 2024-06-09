@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.rqchallenge.employees.model.CreateEmployeeRequestTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-06-09T11:49:22" hostname="Amits-Laptop.local" time="0.05">
+  <properties/>
+  <testcase name="shouldGiveErrorIfNameIsNull()" classname="com.example.rqchallenge.employees.model.CreateEmployeeRequestTest" time="0.018"/>
+  <testcase name="shouldGiveErrorIfNameIsEmpty()" classname="com.example.rqchallenge.employees.model.CreateEmployeeRequestTest" time="0.009"/>
+  <testcase name="shouldGiveErrorIfAgeIsNull()" classname="com.example.rqchallenge.employees.model.CreateEmployeeRequestTest" time="0.01"/>
+  <testcase name="shouldGiveErrorIfSalaryIsNull()" classname="com.example.rqchallenge.employees.model.CreateEmployeeRequestTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

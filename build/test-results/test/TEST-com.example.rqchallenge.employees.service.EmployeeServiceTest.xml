@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.rqchallenge.employees.service.EmployeeServiceTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2024-06-09T11:49:22" hostname="Amits-Laptop.local" time="0.062">
+  <properties/>
+  <testcase name="shouldGetEmployeesMatchingGivenSearchString()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.044"/>
+  <testcase name="shouldCreateEmployeeInRemoteDB()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.002"/>
+  <testcase name="shouldReturnTopHighestEarningEmployeeNamesIfFoundInRemoteDB()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.004"/>
+  <testcase name="shouldReturnEmptyEmployeeIfNotFoundInRemoteDBWhileDeletion()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="shouldReturnHighestSalaryOfEmployeeIfFoundInRemoteDB()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="shouldGetAllEmployeesFromExternalDatabase()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="shouldReturnNoHighestSalaryIfNotFoundInRemoteDB()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.0"/>
+  <testcase name="shouldReturnDeletedEmployeeIfFoundInRemoteDBWhileEmployeeDeletion()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.002"/>
+  <testcase name="shouldReturnNoEmployeeByIdIfNotFoundInRemoteDB()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="shouldGetEmployeesContainingGivenSearchString()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.0"/>
+  <testcase name="shouldReturnEmployeeByIdIfFoundInRemoteDB()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.0"/>
+  <testcase name="shouldNotReturnTopHighestEarningEmployeeNamesIfNotFoundInRemoteDB()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.0"/>
+  <testcase name="shouldGiveEmptyEmployeeIfInRemoteDBDoesNotReturnData()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

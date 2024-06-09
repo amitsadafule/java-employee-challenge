@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.rqchallenge.employees.EmployControllerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-06-09T11:49:21" hostname="Amits-Laptop.local" time="0.745">
+  <properties/>
+  <testcase name="shouldAcceptSearchStringAsPathVariableToSearchEmployee()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.364"/>
+  <testcase name="shouldGiveNotFoundStatusCodeIfEmployeeIsNotFoundForHighestSalary()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.03"/>
+  <testcase name="shouldAcceptIdAsPathVariableToGetSingleEmployee()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.021"/>
+  <testcase name="shouldGiveInternalServerErrorIfEmployeeNotCreated()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.147"/>
+  <testcase name="shouldCallCreateEmployeeApi()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.043"/>
+  <testcase name="shouldGetAllEmployees()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.014"/>
+  <testcase name="shouldGetTopTenHighestEarningEmployeeNames()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.017"/>
+  <testcase name="shouldGiveBadRequestIfAnyRequestParameterIsMissing()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.028"/>
+  <testcase name="shouldReturnNotFoundIfUserNotFoundInDeletionRequest()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.009"/>
+  <testcase name="shouldGetHighestSalaryOutOfAllEmployees()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.008"/>
+  <testcase name="shouldGiveNotFoundStatusCodeIfEmployeeIsNotFound()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.009"/>
+  <testcase name="shouldReturnSuccessIfSuccessfullyDeleted()" classname="com.example.rqchallenge.employees.EmployControllerTest" time="0.01"/>
+  <system-out><![CDATA[2024-06-09 17:19:19.724  INFO 65677 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.rqchallenge.employees.EmployControllerTest], using SpringBootContextLoader
+2024-06-09 17:19:19.726  INFO 65677 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.rqchallenge.employees.EmployControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-06-09 17:19:19.727  INFO 65677 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.rqchallenge.employees.EmployControllerTest]: EmployControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-09 17:19:19.763  INFO 65677 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.rqchallenge.RqChallengeApplication for test class com.example.rqchallenge.employees.EmployControllerTest
+2024-06-09 17:19:19.770  INFO 65677 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-06-09 17:19:19.771  INFO 65677 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2ef041bb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@45e7bb79, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@605c7a9e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@21c75084, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d16209e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@75527e36, org.springframework.test.context.event.EventPublishingTestExecutionListener@76596288, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6d815fb7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@51af8049, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@376af784, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a9a8ec3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6d0114c0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@40016ce1]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2024-06-09 17:19:19.841  INFO 65677 --- [    Test worker] c.e.r.employees.EmployControllerTest     : Starting EmployControllerTest using Java 17.0.11 on Amits-Laptop.local with PID 65677 (started by amitsadafule in /Users/amitsadafule/Documents/My Stuff/Code/reliaquest/java-employee-challenge)
+2024-06-09 17:19:19.841  INFO 65677 --- [    Test worker] c.e.r.employees.EmployControllerTest     : No active profile set, falling back to default profiles: default
+2024-06-09 17:19:21.074  INFO 65677 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-09 17:19:21.075  INFO 65677 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-09 17:19:21.076  INFO 65677 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-09 17:19:21.091  INFO 65677 --- [    Test worker] c.e.r.employees.EmployControllerTest     : Started EmployControllerTest in 1.31 seconds (JVM running for 6.313)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /search/ami
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#getEmployeesByNameSearch(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":1,"name":"Amit","salary":12,"age":15}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /highestSalary
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#getHighestSalaryOfEmployees()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.example.rqchallenge.exception.NotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#getEmployeeById(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"name":"Amit","salary":12,"age":15}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"44"]
+             Body = {"name": "new name","salary": 123,"age": 34}
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#createEmployee(Map)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.example.rqchallenge.exception.NotCreatedException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"44"]
+             Body = {"name": "new name","salary": 123,"age": 34}
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#createEmployee(Map)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"name":"new name","salary":123,"age":34}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#getAllEmployees()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":1,"name":"Amit","salary":12,"age":15}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /topTenHighestEarningEmployeeNames
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#getTopTenHighestEarningEmployeeNames()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = ["a","b","c","d","e","f","g","h","i","j"]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"38"]
+             Body = {"name": null,"salary": 123,"age": 34}
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#createEmployee(Map)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = javax.validation.ConstraintViolationException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"34"]
+     Content type = text/plain;charset=UTF-8
+             Body = name: Name cannot be null or empty
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#deleteEmployeeById(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.example.rqchallenge.exception.NotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /highestSalary
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#getHighestSalaryOfEmployees()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = 4000
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#getEmployeeById(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.example.rqchallenge.exception.NotFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.rqchallenge.employees.controller.EmployController
+           Method = com.example.rqchallenge.employees.controller.EmployController#deleteEmployeeById(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"8"]
+     Content type = text/plain;charset=UTF-8
+             Body = new name
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
